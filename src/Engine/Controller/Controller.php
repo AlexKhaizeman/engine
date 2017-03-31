@@ -9,7 +9,12 @@
 namespace Engine\Controller;
 
 
+use Engine\Application\Application;
+
 class Controller
 {
-    
+    public static function render($template, $data = [])
+    {
+        return Application::getInstance()->getTemplate()->render($template, $data);
+    }
 }
