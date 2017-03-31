@@ -1,0 +1,29 @@
+{
+  "name": "AlexKhaizeman/engine",
+  "homepage": "https://github.com/AlexKhaizeman/engine",
+  "version": "0.1",
+  "type": "library",
+  "license": "MIT",
+  "autoload": {
+    "psr-4": {
+      "Engine\\Application\\": "src/Engine/Application",
+      "Engine\\Controller\\": "src/Engine/Controller",
+      "Engine\\Database\\": "src/Engine/Database",
+      "Engine\\Template\\": "src/Engine/Template"
+    }
+  },
+  "require": {
+    "php": ">=5.4"
+  },
+  "authors": [
+    {
+      "name": "Alex Khaizeman",
+      "email": "schwarzhermelin@gmail.com",
+      "role": "Developer"
+    }
+  ],
+  "support": {
+    "email": "schwarzhermelin@gmail.com",
+    "issues": "https://github.com/AlexKhaizeman/engine"
+  }
+}
