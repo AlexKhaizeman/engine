@@ -9,7 +9,8 @@
       "Engine\\Application\\": "src/Engine/Application",
       "Engine\\Controller\\": "src/Engine/Controller",
       "Engine\\Database\\": "src/Engine/Database",
-      "Engine\\Template\\": "src/Engine/Template"
+      "Engine\\Template\\": "src/Engine/Template",
+      "Engine\\Router\\": "src/Engine/Router"
     }
   },
   "require": {

@@ -22,6 +22,8 @@ class Application
 
     protected $_router = null;
 
+    protected static $_instance = null;
+
     public function __construct($config = [])
     {
         $this->_config = $config;
@@ -29,6 +31,18 @@ class Application
         $this->initDatabase(isset($config['database']) ? $config['database'] : []);
         $this->initTemplate(isset($config['template']) ? $config['template'] : []);
         $this->initRouter(isset($config['router']) ? $config['router'] : []);
+    }
+
+    /**
+     * @param array $config
+     * @return self
+     */
+    public static function getInstance($config = [])
+    {
+        if (!static::$_instance) {
+            static::$_instance = new static($config);
+        }
+        return static::$_instance;
     }
 
     protected function initDatabase($config = [])
@@ -44,5 +58,11 @@ class Application
     protected function initRouter($config = [])
     {
         $this->_router = new Router($config);
+    }
+
+
+    public function run()
+    {
+
     }
 }

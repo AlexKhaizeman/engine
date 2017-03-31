@@ -9,9 +9,15 @@
 namespace Engine\Database;
 
 
+use PDO;
+
 class Database
 {
+    protected $_pdo;
+
     public function __construct($config)
     {
+        $dns = 'mysql:dbname='.$config['database'].";host=".$config['host'] . ';charset=UTF8;';
+        $this->_pdo = new PDO( $dns, $config['username'], $config['password'] );
     }
 }
